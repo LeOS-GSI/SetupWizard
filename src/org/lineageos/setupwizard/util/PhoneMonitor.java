@@ -151,9 +151,7 @@ public class PhoneMonitor {
 
     public static void onSetupFinished() {
         if (sInstance != null) {
-            try {
-                sInstance.mContext.unregisterReceiver(sInstance.mIntentReceiver);
-            } catch (Exception e) {}
+            sInstance.mContext.unregisterReceiver(sInstance.mIntentReceiver);
         }
     }
 
